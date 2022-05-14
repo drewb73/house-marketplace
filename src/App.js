@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import {ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import PrivateRoute from './components/PrivateRoute'
 import Navbar from './components/Navbar'
 import Explorer from './pages/Explorer'
 import ForgotPassword from './pages/ForgotPassword'
@@ -20,7 +21,12 @@ function App() {
         <Route path='/' element={<Explorer />} />
         <Route path='/forgotpassword' element={<ForgotPassword />} />
         <Route path='/offers' element={<Offers />} />
-        <Route path='/profile' element={<Profile />} />
+
+        //Private routes only accessed by loggedin viewers
+        <Route path='/profile' element={<PrivateRoute />}>
+          <Route path='/profile' element={<Profile />} />
+        </Route>
+        
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/sign-in' element={<SignIn />} />
       </Routes>
