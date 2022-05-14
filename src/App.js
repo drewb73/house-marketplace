@@ -9,6 +9,7 @@ import Offers from './pages/Offers'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Profile from './pages/Profile'
+import Category from './pages/Category'
 
 
 
@@ -21,12 +22,13 @@ function App() {
         <Route path='/' element={<Explorer />} />
         <Route path='/forgotpassword' element={<ForgotPassword />} />
         <Route path='/offers' element={<Offers />} />
+        <Route path='/category/:categoryName' element={<Category />} />
 
         //Private routes only accessed by loggedin viewers
         <Route path='/profile' element={<PrivateRoute />}>
           <Route path='/profile' element={<Profile />} />
         </Route>
-        
+
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/sign-in' element={<SignIn />} />
       </Routes>
