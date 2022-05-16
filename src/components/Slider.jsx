@@ -56,11 +56,11 @@ function Slider() {
             <p className='exploreHeading'>Recommended</p>
     
         <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        slidesPerView={1}
-        pagination={{ clickable: true }}
-        navigation
-      >
+         modules={[Navigation, Pagination, Scrollbar, A11y]}
+         slidesPerView={1}
+         pagination={{ clickable: true }}
+         navigation
+         >
         {listings.map(({ data, id }) => {
           return (
             <SwiperSlide
@@ -85,9 +85,9 @@ function Slider() {
           )
         })}
       </Swiper>
-          </>
-        )
-      )
-    }
+    </>
+    )
+  ) 
+}
 
 export default Slider

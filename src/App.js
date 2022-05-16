@@ -13,6 +13,7 @@ import ForgotPassword from './pages/ForgotPassword'
 import CreateListing from './pages/CreateListing'
 import Listing from './pages/Listing'
 import Contact from './pages/Contact'
+import EditListing from './pages/EditListing'
 
 
 
@@ -28,6 +29,8 @@ function App() {
         <Route path='/category/:categoryName' element={<Category />} />
         <Route path='/create-listing' element={<CreateListing />} />
         <Route path='/category/:categoryName/:listingId' element={<Listing />} />
+        <Route path='/edit-listing/:listingId' element={<EditListing />} />
+
 
         //Private routes only accessed by loggedin viewers
         <Route path='/profile' element={<PrivateRoute />}>
