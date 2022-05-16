@@ -10,6 +10,7 @@ import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Profile from './pages/Profile'
 import Category from './pages/Category'
+import CreateListing from './pages/CreateListing'
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/forgotpassword' element={<ForgotPassword />} />
         <Route path='/offers' element={<Offers />} />
         <Route path='/category/:categoryName' element={<Category />} />
+        <Route path='/create-listing' element={<CreateListing />} />
 
         //Private routes only accessed by loggedin viewers
         <Route path='/profile' element={<PrivateRoute />}>
